@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: herkey-devops-assignment
+spec:
+  type: LoadBalancer
+  selector:
+    app: herkey-flask-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
